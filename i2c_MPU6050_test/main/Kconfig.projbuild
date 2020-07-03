@@ -1,0 +1,159 @@
+menu "Example Configuration"
+
+    menu "I2C Master"
+        config I2C_MASTER_SCL
+            int "SCL GPIO Num"
+            default 22
+            help
+                GPIO number for I2C Master clock line.
+
+        config I2C_MASTER_SDA
+            int "SDA GPIO Num"
+            default 21
+            help
+                GPIO number for I2C Master data line.
+
+        config I2C_MASTER_PORT_NUM
+            int "Port Number"
+            default 0
+            help
+                Port number for I2C Master device.
+
+        config I2C_MASTER_FREQUENCY
+            int "Master Frequency"
+            default 100000
+            help
+                I2C Speed of Master device.
+    endmenu
+
+menu "I2C Slave"
+        config I2C_SLAVE_SCL
+            int "SCL GPIO Num"
+            default 5
+            help
+                GPIO number for I2C Slave clock line.
+
+        config I2C_SLAVE_SDA
+            int "SDA GPIO Num"
+            default 4
+            help
+                GPIO number for I2C Slave data line.
+
+        config I2C_SLAVE_PORT_NUM
+            int "Port Number"
+            default 1
+            help
+                Port number for I2C Slave device.
+
+        config I2C_SLAVE_ADDRESS
+            hex "ESP Slave Address"
+            default 0x28
+            help
+                Hardware Address of I2C Slave Port.
+    endmenu   
+
+
+    menu "MPU6050 Sensor"
+
+choice MPU6050_ADDR
+            prompt "MPU6050 I2C Address"
+            default MPU6050_I2C_ADDRESS_LOW
+            help
+                Hardware address of MPU6050, which is 2 types, and determined by ADDR terminal.
+
+            config MPU6050_I2C_ADDRESS_LOW
+                bool "MPU6050 I2C Address(ADDR=0)"
+                help
+                    I2C Address of BH1750 Sensor according to your schemetic configuration.
+
+            config MPU6050_I2C_ADDRESS_High
+                bool "MPU6050 I2C Address(ADDR=1)"
+                help
+                    I2C Address of MPU6050 Sensor according to your schemetic configuration.
+        endchoice
+
+        config MPU6050_ADDR
+            hex
+            default 0x69 if MPU6050_I2C_ADDRESS_High
+            default 0x68 if MPU6050_I2C_ADDRESS_LOW
+
+
+        choice MPU6050_ACC_SENSTIVITY
+            prompt "ACC_FS_SENSTIVITY"
+            default ACC_FS_SENSTIVITY_0
+
+            config ACC_FS_SENSTIVITY_0
+                bool "MPU6050 ACC Senstivity"
+                default 16384
+
+            config ACC_FS_SENSTIVITY_1
+                bool "MPU6050 ACC Senstivity"
+                default 8192
+              
+        config ACC_FS_SENSTIVITY_2
+                bool "MPU6050 ACC Senstivity"
+                default 4096
+
+        config ACC_FS_SENSTIVITY_3
+                bool "MPU6050 ACC Senstivity"
+                default 2048
+
+        endchoice
+
+       choice MPU6050_GYR_SENSTIVITY
+            prompt "GYR_FS_SENSTIVITY"
+            default GYR_FS_SENSTIVITY_0
+            
+
+            config GYR_FS_SENSTIVITY_0
+                bool "MPU6050 GYR Senstivity"
+                default 131
+
+            config GYR_FS_SENSTIVITY_1
+                bool "MPU6050 GYR Senstivity"
+                default 65.5
+              
+        config GYR_FS_SENSTIVITY_2
+                bool "MPU6050 GYR Senstivity"
+                default 32.8
+
+        config GYR_FS_SENSTIVITY_3
+                bool "MPU6050 GYR Senstivity"
+                default 16.4
+
+        endchoice
+
+
+	config MPU6050_REG_POWER 
+            hex "MPU6050 power management register"
+            default 0x6B
+
+    config MPU6050_REG_ACCEL_CONFIG 
+            hex "MPU6050 ACC config register"
+            default 0x1C
+
+    config MPU6050_REG_GYRO_CONFIG 
+            hex "MPU6050 GYRO config register"
+            default 0x1B
+
+        config MPU6050_ACC_REG
+            hex
+            default 0x3B if MPU6050_REG_ACC_X_HIGH
+            default 0x3C if MPU6050_REG_ACC_X_LOW
+            default 0x3D if MPU6050_REG_ACC_Y_HIGH
+            default 0x3E if MPU6050_REG_ACC_Y_LOW
+            default 0x3F if MPU6050_REG_ACC_Z_HIGH
+            default 0x40 if MPU6050_REG_ACC_Z_LOW
+
+	 config MPU6050_GYRO_REG
+            hex
+            default 0x43 if MPU6050_REG_GYRO_X_HIGH
+            default 0x44 if MPU6050_REG_GYRO_X_LOW
+            default 0x45 if MPU6050_REG_GYRO_Y_HIGH
+            default 0x46 if MPU6050_REG_GYRO_Y_LOW
+            default 0x47 if MPU6050_REG_GYRO_Z_HIGH
+            default 0x48 if MPU6050_REG_GYRO_Z_LOW
+
+    endmenu
+
+endmenu

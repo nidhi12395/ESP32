@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/nidhi/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader",
+    "config_file":        "/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.2-dev-910-g4fe04f115-dirty",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/nidhi/esp/esp-idf/components/efuse/Kconfig;/home/nidhi/esp/esp-idf/components/esp32/Kconfig;/home/nidhi/esp/esp-idf/components/esp_common/Kconfig;/home/nidhi/esp/esp-idf/components/log/Kconfig;/home/nidhi/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/nidhi/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/nidhi/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/nidhi/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/nidhi/esp/esp-idf/components/bootloader", "/home/nidhi/esp/esp-idf/components/bootloader_support", "/home/nidhi/esp/esp-idf/components/efuse", "/home/nidhi/esp/esp-idf/components/esp32", "/home/nidhi/esp/esp-idf/components/esp_common", "/home/nidhi/esp/esp-idf/components/esp_rom", "/home/nidhi/esp/esp-idf/components/esptool_py", "/home/nidhi/esp/esp-idf/components/log", "/home/nidhi/esp/esp-idf/components/bootloader/subproject/main", "/home/nidhi/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/nidhi/esp/esp-idf/components/partition_table", "/home/nidhi/esp/esp-idf/components/soc", "/home/nidhi/esp/esp-idf/components/spi_flash", "/home/nidhi/esp/esp-idf/components/xtensa", "" ]
+}
