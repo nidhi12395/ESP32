@@ -46,8 +46,6 @@
 
 
 uint8_t buffer[14];
-size_t data_len= 12;
-SemaphoreHandle_t print_mux = NULL;
 
 static esp_err_t i2c_master_init(void)
 {
@@ -111,7 +109,7 @@ static void disp_buf(uint8_t *buf, int len)
     pbuffer[6] = (int)((buf[12] << 8) | buf[13]);
     for (i = 0; i < 7; i++) {
              printf("%d ", pbuffer[i]);
-    }414094
+    }
     printf("\n");
 }
 
