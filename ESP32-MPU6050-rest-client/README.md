@@ -9,4 +9,4 @@ The Example consists of HTTPD server demo with demostration of URI handling :
     1. compile and burn the firmware `idf.py -p PORT flash`
     2. run `idf.py -p PORT monitor` and note down the IP assigned to your ESP module. The default port is 80
     3. test the example :
-        Open postman: GET <id_address>\api\mpu6050\rawvalues.
+        Open postman: GET <ip_address>\api\mpu6050\rawvalues.
