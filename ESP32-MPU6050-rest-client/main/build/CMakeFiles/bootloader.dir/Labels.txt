@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/CMakeFiles/bootloader
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/CMakeFiles/bootloader.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/CMakeFiles/bootloader-complete.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/nidhi/esp/esp-idf/examples/peripherals/i2c/i2c_self_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
