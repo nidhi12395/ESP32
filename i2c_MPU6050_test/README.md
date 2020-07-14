@@ -45,4 +45,5 @@ See the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/l
 
 ### C files
 
-There are two c files one is 
+There are two c files one is MPU6050_identity.c in which I have read who am i register
+Other file is i2c_example_main.c in which I have read raw sensor values 
