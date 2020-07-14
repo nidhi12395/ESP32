@@ -1,4 +1,4 @@
-# Simple HTTPD Server Example
+# ESP32-MPU6050-rest-client
 
 The Example consists of HTTPD server demo with demostration of URI handling :
     1. URI \api\mpu6050\rawvalues for GET command returns raw values of acclerometer (x, y, z axis), gyroscope (x, y, z axis) and temperature.
